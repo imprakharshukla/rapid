@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "noEmit": false,
+    "target": "ES2017",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types", "./src/types", "./custom.d.ts"]
+  },
+  "exclude": ["node_modules", "tests"],
+  "include": ["./src/**/*.ts", "./custom.d.ts"]
+}

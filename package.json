@@ -1,0 +1,32 @@
+{
+  "name": "ts-rest-tut",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "start": "turbo start",
+    "db:generate": "turbo db:generate",
+    "db:migrate": "turbo db:migrate",
+    "db:migrate-prod": "turbo db:migrate-prod",
+    "db:studio": "turbo db:studio",
+    "db:push": "turbo db:push db:generate",
+    "dev": "turbo dev --parallel",
+    "dev-web": "turbo dev --filter web",
+    "dev-admin": "turbo dev --filter admin",
+    "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
+    "lint": "turbo lint && manypkg check",
+    "lint:fix": "turbo lint:fix && manypkg fix",
+    "type-check": "turbo type-check",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
