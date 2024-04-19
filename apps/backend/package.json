@@ -32,7 +32,7 @@
     "@scalar/express-api-reference": "^0.2.57",
     "@trigger.dev/express": "^2.3.18",
     "@trigger.dev/sdk": "^2.3.18",
-    "@ts-rest/core": "^3.33.0",
+    "@ts-rest/core": "^3.44.1",
     "@ts-rest/express": "^3.44.1",
     "@ts-rest/open-api": "^3.33.0",
     "@types/jsonwebtoken": "^9.0.6",

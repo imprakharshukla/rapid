@@ -12,6 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "noEmit": false,
+    "moduleResolution": "node",
     "target": "ES2017",
     "module": "CommonJS",
     "esModuleInterop": true,
