@@ -1,0 +1,48 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm with-env next dev",
+    "build": "pnpm with-env next build",
+    "start": "pnpm with-env next start",
+    "lint": "eslint . --max-warnings 0",
+    "with-env": "dotenv -e .env --"
+  },
+  "dependencies": {
+    "@repo/auth": "workspace:^",
+    "@repo/contract": "workspace:^",
+    "@repo/db": "workspace:^",
+    "@repo/tailwind-config": "workspace:^",
+    "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^4.32.6",
+    "@ts-rest/next": "^3.44.1",
+    "@ts-rest/react-query": "^3.33.0",
+    "axios": "^1.6.8",
+    "lucide-react": "^0.216.0",
+    "next": "^14.1.1",
+    "next-auth": "^4.24.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "sonner": "^1.1.0"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.1.1",
+    "@prisma/nextjs-monorepo-workaround-plugin": "^5.12.1",
+    "@repo/eslint-config": "workspace:*",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.12",
+    "@tanstack/react-query-devtools": "^4.32.6",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "dotenv-cli": "^7.2.1",
+    "eslint": "^8.57.0",
+    "tailwindcss": "^3.3.2",
+    "tailwindcss-animate": "^1.0.5",
+    "typescript": "^5.3.3"
+  }
+}

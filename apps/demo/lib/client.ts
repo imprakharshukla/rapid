@@ -19,7 +19,7 @@ export class RestAPI {
     public client: InitClientReturn<typeof superContract, InitClientArgs>;
 
     constructor(tokenProvider: TokenProvider) {
-        const baseUrl = "http://localhost:3002/api";
+        const baseUrl = "https://api.rapid.prakhar.codes/api";
 
         this.tokenProvider = tokenProvider;
         this.client = initQueryClient<typeof superContract, InitClientArgs>(superContract, {

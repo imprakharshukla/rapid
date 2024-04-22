@@ -41,15 +41,15 @@ export function BaseLayout({ children }: { children: React.ReactNode }) {
         <div >
             <div className="z-50 flex min-h-screen w-full flex-col">
                 <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
-                    <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+                    <nav className="flex flex-col gap-6 text-lg font-medium md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
                         <Link
                             href="/shop"
                             className="flex items-center gap-2 text-lg font-semibold md:text-base"
                         >
-                            <span className="text">Repo</span>
+                            <span className="text">Rapid ⚡</span>
                         </Link>
                     </nav>
-                    <Sheet>
+                    {/* <Sheet>
                         <SheetTrigger asChild>
                             <Button
                                 variant="outline"
@@ -85,7 +85,7 @@ export function BaseLayout({ children }: { children: React.ReactNode }) {
                                 })}
                             </nav>
                         </SheetContent>
-                    </Sheet>
+                    </Sheet> */}
                     <div className="flex w-full items-center gap-2 md:ml-auto md:gap-2 lg:gap-2">
                         <form className="ml-auto flex-1 sm:flex-initial">
                             {/* <div className="relative">
@@ -128,7 +128,7 @@ export function BaseLayout({ children }: { children: React.ReactNode }) {
                         </div>
                     </div>
                 </header>
-                <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 bg-muted/40 py-2 md:gap-8 md:px-5 md:py-10">
+                <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] bg-background py-2 px-4 md:px-5 md:py-10">
                     {/* <div className="mx-auto grid w-full max-w-6xl gap-2">
             <h1 className="text-3xl font-semibold">Settings</h1>
           </div>
