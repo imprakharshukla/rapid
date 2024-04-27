@@ -2,13 +2,7 @@ import { InitClientArgs } from "@ts-rest/next";
 import { InitClientReturn, initQueryClient } from "@ts-rest/react-query";
 import axios, { Method, isAxiosError } from "axios";
 
-
-
 import { superContract } from "@repo/contract";
-
-
-
-
 
 export interface TokenProvider {
     getToken: () => Promise<string>;

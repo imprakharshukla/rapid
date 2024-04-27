@@ -5,7 +5,7 @@ import baseConfig from "@repo/tailwind-config";
 export default {
     content: [
         "./app/**/*.{js,ts,jsx,tsx}",
-        "../../packages/ui/**/*.{js,ts,jsx,tsx}",
+        "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
         "./src/**/*.{ts,tsx,mdx}",
     ],
     presets: [baseConfig],

@@ -52,7 +52,7 @@ export default function Page() {
   `)
 
 
-  const { mutate: mutateTextData, data: textData, isLoading: isTextLoading } = client.text.getText.useMutation()
+  // const { mutate: mutateTextData, data: textData, isLoading: isTextLoading } = client.text.getText.useMutation()
 
   return (
     <div className="w-full m-5 lg:mx-auto gap-2 grid lg:min-h-[600px] xl:min-h-[800px]">
@@ -93,22 +93,24 @@ export default function Page() {
                 setText(value)
               }} className="" />
               <Button onClick={() => {
-                mutateTextData({
-                  body: {
-                    name: text
-                  }
-                })
-              }}>Send Request</Button>
+                //     mutateTextData({
+                //       body: {
+                //         name: text
+                //       }
+                //     })
+                //   }}>Send Request</Button>
+                // </div>
+                // {isTextLoading &&
+                //   <Loader></Loader>
+                // }
+                // {
+                //   textData &&
+                //   <p>
+                //     {textData.body.response}
+                //   </p>
+              }
+              }></Button>
             </div>
-            {isTextLoading &&
-              <Loader></Loader>
-            }
-            {
-              textData &&
-              <p>
-                {textData.body.response}
-              </p>
-            }
           </CardContent>
         </Card>
 
