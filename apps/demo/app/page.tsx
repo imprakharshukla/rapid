@@ -52,7 +52,7 @@ export default function Page() {
   `)
 
 
-  // const { mutate: mutateTextData, data: textData, isLoading: isTextLoading } = client.text.getText.useMutation()
+  const { mutate: mutateTextData, data: textData, isLoading: isTextLoading } = client.text.getText.useMutation()
 
   return (
     <div className="w-full m-5 lg:mx-auto gap-2 grid lg:min-h-[600px] xl:min-h-[800px]">
@@ -93,24 +93,22 @@ export default function Page() {
                 setText(value)
               }} className="" />
               <Button onClick={() => {
-                //     mutateTextData({
-                //       body: {
-                //         name: text
-                //       }
-                //     })
-                //   }}>Send Request</Button>
-                // </div>
-                // {isTextLoading &&
-                //   <Loader></Loader>
-                // }
-                // {
-                //   textData &&
-                //   <p>
-                //     {textData.body.response}
-                //   </p>
-              }
-              }></Button>
+                mutateTextData({
+                  body: {
+                    name: text
+                  }
+                })
+              }}>Send Request</Button>
             </div>
+            {isTextLoading &&
+              <Loader></Loader>
+            }
+            {
+              textData &&
+              <p>
+                {textData.body.response}
+              </p>
+            }
           </CardContent>
         </Card>
 
@@ -118,53 +116,55 @@ export default function Page() {
 
 
       </div>
-      <div>
-        <Card className="border-dashed ">
-          <CardHeader>
-            <CardTitle>TS Rest Contracts (Shared)</CardTitle>
-            <CardDescription>Use the @ts-rest/core package to define a contract. Nesting routers can help organize your resources. For example, /users/:id/posts could have a nested router contract.users.posts. This is the path that you'd use on the client to query the API</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="border border-border rounded bg-card">
-              <SyntaxHighlighter
-                language="typescript"
-                style={atomOneDark}
-                wrapLongLines
-                customStyle={{
-                  flex: '1',
-                  background: 'transparent',
-                }}
-              >
-                {helloContractString}
-              </SyntaxHighlighter>
-            </div>
-          </CardContent>
-        </Card>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
+        <div>
+          <Card className="border-dashed ">
+            <CardHeader>
+              <CardTitle>TS Rest Contracts (Shared)</CardTitle>
+              <CardDescription>Use the @ts-rest/core package to define a contract. Nesting routers can help organize your resources. For example, /users/:id/posts could have a nested router contract.users.posts. This is the path that you'd use on the client to query the API</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="border border-border rounded bg-card">
+                <SyntaxHighlighter
+                  language="typescript"
+                  style={atomOneDark}
+                  wrapLongLines
+                  customStyle={{
+                    flex: '1',
+                    background: 'transparent',
+                  }}
+                >
+                  {helloContractString}
+                </SyntaxHighlighter>
+              </div>
+            </CardContent>
+          </Card>
 
-      </div>
-      <div>
-        <Card className="border-dashed ">
-          <CardHeader>
-            <CardTitle>TS React Query (Frontend)</CardTitle>
-            <CardDescription>This is a client using @ts-rest/react-query, using @tanstack/react-query under the hood.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="border border-border rounded">
-              <SyntaxHighlighter
-                language="typescript"
-                style={atomOneDark}
-                wrapLongLines
-                customStyle={{
-                  flex: '1',
-                  background: 'transparent',
-                }}
-              >
-                {queryCodeString}
-              </SyntaxHighlighter>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+        </div>
+        <div>
+          <Card className="border-dashed ">
+            <CardHeader>
+              <CardTitle>TS React Query (Frontend)</CardTitle>
+              <CardDescription>This is a client using @ts-rest/react-query, using @tanstack/react-query under the hood.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="border border-border rounded">
+                <SyntaxHighlighter
+                  language="typescript"
+                  style={atomOneDark}
+                  wrapLongLines
+                  customStyle={{
+                    flex: '1',
+                    background: 'transparent',
+                  }}
+                >
+                  {queryCodeString}
+                </SyntaxHighlighter>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div >
     </div >
   );
 }

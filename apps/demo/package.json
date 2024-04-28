@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "pnpm with-env next dev",
     "build": "pnpm with-env next build --debug",
-        "start": "pnpm with-env next start",
+    "start": "pnpm with-env next start",
     "lint": "eslint . --max-warnings 0",
     "with-env": "dotenv -e .env --"
   },
