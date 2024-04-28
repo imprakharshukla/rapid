@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Rapid | A typesafe Turborepo Express starter with TS-Rest",
   description: "Rapid a starter kit to jumpstart your typeful apps. It is a monorepo that is built on top of NextJs, ExpressJS, TS-Rest, Shadcn/UI, Tailwind, NextAuth",
   openGraph: {
-    images: ['/rapid_og_image.png'],
+    images: ['https://rapid.prakhar.codes/rapid_og_image.png'],
   },
 };
 
