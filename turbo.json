@@ -23,7 +23,6 @@
       "cache": false
     },
     "start": {
-      "dependsOn": ["^build", "^db:generate"],
       "persistent": true,
       "cache": false
     },

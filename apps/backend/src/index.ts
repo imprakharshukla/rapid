@@ -1,6 +1,5 @@
 import "reflect-metadata";
-import { TsRestRequest } from "@ts-rest/express";
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 
 
 import Logger from "./loaders/logger";
@@ -24,7 +23,6 @@ declare global {
   }
 }
 
-const app: Express = express();
 const port = process.env.PORT || 3002;
 
 async function startServer() {
