@@ -27,6 +27,10 @@ export default ({ app }: { app: express.Application }) => {
   // Load API routes
   const router = routes();
 
+  app.get("/health", (req, res) => {
+    return res.status(200).send({ status: "ok" });
+  });
+
   // Load Trigger.dev middleware
   // app.use(createMiddleware(client));
 
