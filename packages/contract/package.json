@@ -2,7 +2,11 @@
   "name": "@repo/contract",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,8 +19,5 @@
     "@ts-rest/core": "^3.33.0",
     "tsup": "^8.0.2",
     "zod": "^3.22.4"
-  },
-  "publishConfig": {
-    "directory": "dist"
   }
 }
